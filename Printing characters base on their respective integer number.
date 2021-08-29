@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout<<"For integer number from 22 to 132\n";
+	cout<<"integer   characters\n";
+	cout<<"......................\n";
+	for(int i=22; i<132; i++)
+	//display upto 132
+	cout<<i<<"      "<<(char)i<<"\n";
+	return 0;
+}
