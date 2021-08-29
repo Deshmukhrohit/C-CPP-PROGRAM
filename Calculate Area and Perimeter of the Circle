@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+# define PI 3.141
+int main()
+{ 
+float radius, area, circumference;
+cout << "Enter radius of circle\n";
+cin >> radius;
+// area of Circle = PI * radius * radius 
+area = PI * radius * radius ;
+ 
+ // circumference of Circle = 2 * PI * radius
+ circumference = 2 * PI * radius;
+ 
+ cout << "Area of circle :  "<< area<< "\n";
+ cout << "Circumference of circle : " <<circumference;
+ 
+ return 0;
+}
