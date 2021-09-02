@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main(){
+	int   Physics,BME,Maths,BEEE,ED;
+	int Total , Percantage, Result, marks;
+	{
+	cout<<" Enter the marks of Physics:  ";
+		   cin>>Physics;}
+    {
+	cout<<"\n Enter the marks of BME:  ";
+     cin>>BME;}
+    {
+	cout<<"\n Enter the marks of Maths :  ";
+    cin>>Maths;}
+   {
+	 cout<<"\n Enter the marks of BEEE :  ";
+	cin>>BEEE;}
+	{
+	cout<<"\n Enter the marks of Ed :  ";	
+	cin>>ED;}
+	
+		Total=Physics+BME+Maths+BEEE+ED;
+		cout<<"\n Total marks is: "<<Total;
+	
+	
+		Percantage = Total/5;
+		cout<<"\n Percantage is:  "<<Percantage<<"%";
+	
+	   return 0;
+}
