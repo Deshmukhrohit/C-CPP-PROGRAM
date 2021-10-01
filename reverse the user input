@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	for(int i=0;i<t;i++){
+	    int n,rev=0,rem,lastdig;
+	    cin>>n;
+	    rem=n;
+	    while(n>0){
+	        lastdig=n%10;
+	        rev=rev*10+lastdig;
+	        n=n/10;
+	    }
+	    if(rem==rev){
+	        cout<<"wins"<<endl;
+	    }
+	    else{
+	        cout<<"loses"<<endl;
+	    }
+	}
+	return 0;
+}
