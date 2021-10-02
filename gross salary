@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		 float basic,hra,da,sal;
+		cin>>basic;
+		
+		if(basic<1500){
+			hra=(0.1)*basic;
+			da=(0.9)*basic;
+			
+		}
+		else{
+			hra=500;
+			da=(0.98)*basic;
+		}
+		sal=basic+hra+da;
+		 cout<<fixed<<setprecision(2)<<sal<<endl;
+	}
+	return 0;
+}
