@@ -1,0 +1,11 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    float n,cb;
+    cout<<"Enter the Cube root: "<<endl;
+    cin>>n;
+    cb=cbrt(n);
+    cout<<"Cube root is: "<<cb<<endl;
+    return 0;
+    }
