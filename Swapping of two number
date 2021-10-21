@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <conio.h>
+void main(){
+ int a,b,c;
+ printf("ENter the  number:");
+ scanf("%d%d",&a,&b);
+     a=a*b;
+     b=a/b;
+     a=a/b;
+     printf("\n Swapping value is a= %d ",a);
+     printf("\n Swapping value is b= %d ",b);
+    getch();
+}
