@@ -1,0 +1,65 @@
+#include <iostream> 
+
+using namespace std; 
+
+int main() 
+
+{ 
+
+     
+
+  int a[3][3],raw,col; 
+
+  cout<<"Enter the elements of matrix : "; 
+
+  for(raw=0;raw<=2;raw++) 
+
+  { 
+
+  	for(col=0;col<=2;col++) 
+
+  	{ 
+
+  		cin>>a[raw][col]; 
+
+	} 
+
+  } 
+
+	cout<<" matrix = \n"; 
+
+   
+
+  for(raw=0;raw<=2;raw++){ 
+
+  	for(col=0;col<=2;col++) 
+
+  	{ 
+
+  		cout<<" \t"<<a[raw][col]; 
+
+	} 
+
+	cout<<"\n"; 
+
+  } 
+
+  cout<<"Transpose of matrix = \n"; 
+
+  for(raw=0;raw<=2;raw++) 
+
+  { 
+
+  	for(col=0;col<=2;col++) 
+
+  	{ 
+
+  		cout<<" \t"<<a[col][raw]; 
+
+	} 
+
+	cout<<"\n"; 
+
+  } 
+
+  return 0; 
