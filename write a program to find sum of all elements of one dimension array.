@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float per[100],avg;
+    int i,n,sum=0;
+    cout<<"Enter the total number of student ";
+    cin>>n;
+    cout<<"Enter the percentage of students: ";
+    for(i=0;i<=n-1;i++)
+    {
+        cin>>per[i];
+    }
+    for(i=0;i<=n-1;i++)
+    {
+        sum=sum+per[i];
+    }
+    avg = sum/n;
+    cout<<"Average percentage of class = "<<avg<<endl;
+    return 0;
+}
