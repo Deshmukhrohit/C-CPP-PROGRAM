@@ -1,0 +1,45 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a[3][3],b[3][3],mult[3][3],raw,col,k;
+	cout<<"\nEnter the elements of first matrix : ";
+	for(raw=0;raw<=2;raw++)
+	{
+		for(col=0;col<=2;col++)
+		{
+			cin>>a[raw][col];
+		}
+	}
+		cout<<"\nEnter the elements of second matrix : ";
+	for(raw=0;raw<=2;raw++)
+	{
+		for(col=0;col<=2;col++)
+		{
+			cin>>b[raw][col];
+		}
+	}
+	for(raw=0;raw<=2;raw++)
+	{
+		for(col=0;col<=2;col++)
+		{
+			mult[raw][col]=0;
+			for(k=0;k<=2;k++)
+			{
+				mult[raw][col]=mult[raw][col]+a[raw][k]*b[k][col];
+				
+			}
+		}
+	}
+	cout<<"\n Multiplication =  \n";
+	for(raw=0;raw<=2;raw++)
+	{
+		for(col=0;col<=2;col++)
+		{
+			cout<<" \t"<<mult[raw][col];
+		}
+		cout<<"\n";
+	}
+	return 0;
+}
