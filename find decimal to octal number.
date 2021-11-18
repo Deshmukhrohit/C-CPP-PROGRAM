@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void anynum(int n);
+void anynum(int)
+{   
+    int n,b=0,r,m=1;
+    printf("\nEnter any decimal no.: ");
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        r=n%8;
+        n=n/8;
+        b=b+m*r;
+        m=m*10;
+    }
+      printf("\nOctal no. = %d",b);
+    
+}
+int main()
+{   int n;
+    anynum(n);
+   
+    return 0;
+}
