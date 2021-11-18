@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a[10][10],n,raw,col,sum,k;
+	printf("\nEnter the size of square matrix : ");
+	scanf("%d",&n);
+	printf("\nEnter elements of matrix : ");
+	for(raw=0;raw<=n-1;raw++){
+		for(col=0;col<=n-1;col++){
+			scanf("%d",&a[raw][col]);
+		}
+	}
+		for(raw=0;raw<=n-1;raw++){
+		for(col=0;col<=n-1;col++){
+			printf("%d\t",a[raw][col]);
+		}
+		printf("\n");
+	}
+	for(raw=0;raw<=n-1;raw++)
+	{
+	  for(col=n-1;col>=0;col--)
+	  {
+	  	sum=0;
+	  	for(k=0;k<=n-1;k++)
+	  	{
+	  	  if(n%2==0)
+			{
+			 sum=sum+a[k][k]+a[raw][col];
+		    }
+		    if(n%2!=0)
+			{ 
+			 sum=sum+a[k][k]+a[raw][col];
+		    }
+		}
+		break;
+	  }
+	  col--;
+	}
+	
+	printf("%d\t",sum);
+	return 0;
+}
