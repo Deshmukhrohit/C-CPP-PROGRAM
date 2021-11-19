@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include<conio.h>
+void area();
+int main()
+{
+    area();
+    return 0;
+}
+void area()
+{
+    int r,a;
+     printf("\nEnter the radius of circle: ");
+     scanf("%d",&r);
+     a=3.14*r*r;
+     printf("\nArea of cirle = %d",a);
+} 
