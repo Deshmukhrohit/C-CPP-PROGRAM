@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int table(int);
+int main()
+{
+    int n,c;
+    cout<<"Enter any number: ";
+    cin>>n;
+    c=table(n);
+    return 0;
+}
+int table(int n)
+{   int i;
+    for(i=n;i<=n*10;i=i+n)
+    cout<<" "<<i;
+    return i;
+}
