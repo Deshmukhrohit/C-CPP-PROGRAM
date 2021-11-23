@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class fact{
+	public: 
+	void factorial(int);
+};
+void fact :: factorial (int n)
+{
+	int i,m=1;
+	for(i=n;i>=1;i--){
+		m=m*i;
+	}
+	cout<<"\n Factorial = "<<m;
+}
+int main(){
+	fact obj;
+	obj.factorial(5);
+	return 0;
+}
