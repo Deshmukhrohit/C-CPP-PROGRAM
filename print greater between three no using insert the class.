@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class great{
+	public:
+		void mygreat(int a,int b,int c)
+		{
+			if(a>b && a>c)
+			cout<<"a is greater"<<endl;
+			if(a<b && b>c)
+			cout<<"b is greater"<<endl;
+			if(a<c && c>b)
+			cout<<"c is greater"<<endl;
+		}
+};
+int main(){
+	great obj;
+	obj.mygreat(10,125,250);
+	return 0;
+}
