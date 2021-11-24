@@ -1,0 +1,21 @@
+
+#include <iostream>
+using namespace std;
+class swapnum{
+    public:
+    void swapping(int a,int b){
+        a = a+b;
+        b = a-b;
+        a = a-b;
+    
+    cout<<a<<b<<endl;
+    }
+};
+
+int main()
+{
+    swapnum obj;
+    obj.swapping(54 , 79);
+
+    return 0;
+}
