@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+class area{
+    private:
+          int l,b,a;
+    public:
+    area() {
+        cout<<"\n Enter length of rectangle";
+        cin>>l;
+        cout<<" Enter breadth of rectangle";
+        cin>>b;
+        a = l*b;
+        cout<<"\n Area of rectangle : "<<a<<endl;
+    }
+};
+
+int main()
+{
+    area obj;
+    return 0;
+}
