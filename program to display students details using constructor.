@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class student{
+	public:
+		student(){
+			char name[20];
+			char branch[20];
+			int id;
+			cout<<"\n Enter name of student: ";
+			cin>>name;
+			cout<<"\n Enter branch of student: ";
+			cin>>branch;
+			cout<<"\n Enter id of student:  \n";
+			cin>>id;
+			cout<<"\n Name = "<<name;
+			cout<<"\n branch = "<<branch;
+			cout<<"\n id = "<<id;	
+		}
+};
+int main(){
+	student s;
+	return 0;
+}
