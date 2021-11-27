@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+int s;
+
+void vol(int);
+void vol(int);
+void vol(int,int);
+void vol(int , int);
+    
+void vol(int r){
+        s = (4*3.14159*r*r*r)/3;
+        cout<<"volume of sphere = "<<s;
+    }
+void vol(int a,int s){
+        s=a*a*a;
+        cout<<"\n volume of cube = "<<s;
+    }
+void vol(int r,int h,int s){
+        s=3.14159*r*r*h;
+        cout<<"\n Volume of cylinder = "<<s;
+    }
+void vol (int r,int h,int a,int x){
+       x=0;
+        a = (1/3)*3.14159*r*r*h;
+        cout<<"\n Volume of cone = "<<s;
+    }
+
+int main()
+{
+   int r,h,a;
+   
+
+  vol(15);
+   vol(40,0);
+   vol(13,10,54);
+   vol(10,15,5,4);
+   
+   
+    return 0;
+}
