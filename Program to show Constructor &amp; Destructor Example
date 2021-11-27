@@ -1,0 +1,39 @@
+#include <iostream> 
+
+using namespace std; 
+
+class show{ 
+
+    public: 
+
+    show(int,int); 
+
+    ~show () { 
+
+        cout<<"\n calling a Destructor"; 
+
+    } 
+
+}; 
+
+show :: show (int a,int b) { 
+
+    int c; 
+
+    c=a+b; 
+
+    cout<<"sum = "<<c; 
+
+} 
+
+  
+
+int main () 
+
+{ 
+
+    show s (59,42); 
+
+    return 0; 
+
+} 
