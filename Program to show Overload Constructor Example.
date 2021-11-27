@@ -1,0 +1,53 @@
+#include <iostream> 
+
+using namespace std; 
+
+class mult 
+
+{ 
+
+public: 
+
+    int ans; 
+
+    mult() 
+
+    { 
+
+        ans = 0; 
+
+    } 
+
+    mult(int a, int b) 
+
+{ 
+
+        ans = a * b; 
+
+    } 
+
+    void disp() 
+
+    { 
+
+        cout<< ans<< endl; 
+
+    } 
+
+}; 
+
+int main () 
+
+{ 
+
+    mult s; 
+
+    mult s2(10, 20); 
+
+    s.disp(); 
+
+    s2. disp(); 
+
+    return 1; 
+
+} 
