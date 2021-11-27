@@ -1,0 +1,32 @@
+#include <iostream> 
+using namespace std; 
+int s; 
+void area() { 
+    int r;
+        s = 3.14159*r*r; 
+        cout<<"area of circle = "<<s; 
+    } 
+void area(int a,int b) { 
+        s=a*b; 
+        cout<<"\n area of rectangle = "<<s; 
+    } 
+
+void area(int a,int s,int x) { 
+        s=a*a ;
+        cout<<"\n Area of square: "<<s; 
+    } 
+void area(int a) { 
+        s=6*a*a;
+        cout<<"\n Volume of cone = "<<s; 
+    } 
+int main () 
+{ 
+    int a,b;
+    area();
+    area(23,45);
+    area(69,2,4);
+    area(45);
+    return 0; 
+} 
+
+
