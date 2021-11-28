@@ -1,0 +1,47 @@
+#include <iostream> 
+
+using namespace std; 
+
+void swap (int ,int ); 
+
+void swap (double, double); 
+
+int main () 
+
+{ 
+
+  swap (43,98); 
+
+  swap (23.5,5.5); 
+
+    return 0; 
+
+} 
+
+void swap (int x,int y) { 
+
+    int z;  
+
+    z=x; 
+
+    x=y; 
+
+    y=z; 
+
+    cout<<"\n Swapping number is "<<x<<" "<<y; 
+
+} 
+
+void swap (double x,double y) { 
+
+    float z;  
+
+    z=x; 
+
+    x=y; 
+
+    y=z; 
+
+    cout<<"Swapping number is "<<x<<" "<<y; 
+
+} 
