@@ -1,0 +1,149 @@
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+#include<stdio.h>
+
+
+using namespace std;
+class hotel{
+	public:
+		char name[30],gen;
+		int room_no,aadhar;
+		char confort[10],mobile[50],price[10];
+		
+		void setdata(){
+			cout<<"\nEnter your name : ";
+			cin>>name;
+			cout<<"\nEnter mobile number : ";
+			cin>>mobile;
+			cout<<"\nEnter Aadhar number : ";
+			cin>>aadhar;
+			cout<<"\n Enter your Gender(M/F) : ";
+            cin>>gen;
+           cout<<"\n Enter a Type Of Room(AC Room / Non AC Room):";
+            cin>>confort;
+            cout<<"\n Enter Room Price To Have:";
+            cin>>price;
+		}
+		void display(){
+			cout<<"\n\n Name = "<<name<<endl;
+			cout<<"\n Mobile = "<<mobile<<endl;
+			cout<<"\n Aadhar = "<<aadhar<<endl;
+			cout<<"\n confort = "<<confort<<endl;
+			cout<<"\n Price = "<<price<<endl;
+		}	
+};
+class second : public hotel{
+	public : 
+	void setdata1(){
+		cout<<"\n AC Rooms";
+		cout<<"\n Starting from Rooms 10000rs";
+		cout<<"\n Non-Ac Rooms";
+		cout<<"\n Starting from Rooms 5000rs";                
+        cout<<"\n Luxury Rooms";
+        cout<<"\n Starting from Rooms 20000rs";                                                                                                                                                                                       
+		cout<<"\n Ordinary Rooms";
+        cout<<"\n Starting from Rooms 2000rs";
+        cout<<"\n regular rooms";   
+        cout<<"\n Starting from Rooms 1000rs";
+	}
+};
+int main(){
+	second s;
+	int ch,n,c,amout,p,flag=0,b;
+	    cout<<"\n*********************************"<<endl;
+		cout<<"\t HOTEL PARADISE "<<endl;
+		cout<<"*********************************"<<endl;
+	do{
+		void clrscr();
+		 
+		 cout<<"\n\n Main Menu:";
+		 cout<<"\n 1.Room Details";
+        cout<<"\n 2.Booking a Room.";
+        cout<<"\n 3.Edit Records.";
+        cout<<"\n 4.Room Canceling.";
+         cout<<"\n 5.Exit."<<endl;
+         
+        cout<<"\n Enter your Choice";
+         cin>>ch;
+         
+         switch(ch){
+         	case 1:
+         		cout<<"\n\t\t\t ---Room Details--- ";
+         		s.setdata1();
+         		break;
+         	case 2:
+         		 cout<<"\n\t\t\t ---Booking a Room--- ";
+                 cout<<"\n Enter Number of Rooms : ";
+                 cin>>n;
+                 s.room_no=n;
+                //for(int i=0;i<n;i++)
+                
+             	s.setdata();
+	            s.display();
+                cout<<"\nYour Room is Booked";
+                //s.room_no++;
+                p=s.room_no;  
+                break;
+			case 3:
+				flag;
+				cout<<"\n\t\t\t ---Change Your Room Details--- ";
+				cout<<"\n Enter Your Room number :  ";
+				cin>>c;
+				//s.room_no--;
+				for(int i=0;i<n;i++){
+					if(s.room_no==c){
+						flag=1;
+					}
+					else{
+					flag=0;
+					//s.room_no--;
+				}
+			}
+			if(flag==1){
+				s.setdata();
+				cout<<"\n\t\t\t ---Your Room information has been changed--- ";
+				s.display();
+			}
+			else{
+				cout<<"\n *** Wrong Room number ***";
+				//s.room_no--;
+			}
+			break;
+		case 4:
+			
+		    cout<<"\n\t\t\t ---Room cancel--- ";	
+			cout<<"\n Enter your Room number ";
+			cin>>b;
+			//p--;
+			for(int i=0;i<n;i++){
+				if(p==b){
+					flag=1;
+				}
+				else{
+					flag=0;
+				//	p--;	
+				}
+			}
+			if(flag==1){
+				int amount;
+				cout<<"\n Your Room is cancled.";
+				cout<<"\n Enter Your Bank account number: ";
+				cin>>amount;
+				cout<<"\n Your payment is directly transfer to account ";
+			}
+			else{
+				cout<<"\n Wrong Room number";
+				//p--;
+				break;
+			}	
+	    case 5:
+		      exit(0);			
+			   break;
+		default:
+       cout<<"Enter correct choice "; 
+}
+}while(1);
+ 
+ getch();
+}
