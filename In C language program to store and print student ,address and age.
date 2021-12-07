@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+   char s[30],add[50],age[5];
+   printf("\nEnter student name ");
+   gets(s);
+   printf("\n Enter address ");
+   gets(add);
+   printf("\n age ");
+   gets(age);
+   printf("\n student name :");
+   puts(s);
+   printf("\n address : ");
+   puts(add);
+   printf("\n age: ");
+   puts(age);
+   
+
+    return 0;
+}
