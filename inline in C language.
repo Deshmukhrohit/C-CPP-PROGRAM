@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+inline int area(int l,int b){
+	return l*b;
+}
+int main()
+{
+	int x,y,ar;
+	printf("\n Enter length and breadth of rectangle ");
+	scanf("%d%d",&x,&y);
+	ar=area(x,y);
+	printf("\n Area of rectangle = %d",ar);
+	getch();
+}
