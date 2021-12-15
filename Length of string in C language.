@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    char a[30];
+    int l=0;
+    printf("\n enter your name");
+    gets(a);
+    printf("\n Username = ");
+    puts(a);
+    while(a[l]!='\0'){
+        l++;
+    }
+    printf("\n length of string is %d",l);
+    return 0;
+    
+}
