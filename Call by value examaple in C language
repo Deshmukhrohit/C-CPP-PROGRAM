@@ -1,0 +1,22 @@
+#include <stdio.h>
+void swap(int , int );
+int main()
+{
+    int a ,b;
+    printf("Enter any two number ");
+    scanf("%d%d",&a,&b);
+    printf("\n Values of variable before swapping ");
+    printf("a = %d and b = %d",a,b);
+    swap(a,b);
+    printf("\n Values of variable after swapping ");
+    printf("a = %d and b = %d ",a,b);
+    return 0;
+}
+void swap(int x, int y){
+    int z = x;
+       x = y;
+       y = z;
+       printf("\n Values of variable of swap");
+       printf("a = %d and b = %d ",x,y);
+       
+}
