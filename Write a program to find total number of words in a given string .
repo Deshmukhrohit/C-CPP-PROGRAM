@@ -1,0 +1,33 @@
+#include <iostream>
+#include<conio.h>
+using namespace std;
+
+int main()
+{
+    char a[50];
+    int l=0,i,m,n,r;
+    printf("\n Enter any string: ");
+    gets(a);
+    while(a[l]!='\0')
+    {
+        l++;
+    }
+    l++;i=0;m=0;n=0;r=0;
+    while(i<l)
+    {   if(a[1]!=' '){
+        m++;i++;
+        if(a[i]!=' ')
+         r++;i++;
+        }
+       
+        if(a[i]==' ')
+        {
+            m++;i++;
+           if(a[i]!=' ')
+                n++;i++;
+        }
+        i++;
+    }
+    printf("\n Total number of words in string = %d",r+n);
+    return 0;
+}
