@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+void swap(int *,int *);
+int main(){
+    int a,b;
+    cout<<"\nEnter any two number = ";
+    cin>>a>>b;
+    cout<<"\n Values of variable before swapping ";
+    cout<<"a = "<<a<<"\nb = "<<b;
+    swap(&a,&b);
+    cout<<"\n Values of variable After swapping ";
+    cout<<"a = "<<a<<"\nb = "<<b;
+}
+void swap(int *a,int *b){
+    int c = *a;
+        *a = *b;
+        *b = c;
+}
