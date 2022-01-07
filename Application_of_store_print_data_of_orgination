@@ -1,0 +1,204 @@
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+using namespace std;
+class student{
+	private:
+		string name,address;
+		int age;
+	public:
+		void setdata(){
+			cout<<"\nEnter name of student ";
+			fflush(stdin);
+			getline(cin,name);
+			cout<<"\nEnter address of student ";
+			fflush(stdin);
+			getline(cin,address);
+			cout<<"\nEnter age of student ";
+			fflush(stdin);
+			cin>>age;
+		}
+		void getdata(){
+		cout<<"\nName of student = "<<name<<endl;
+		cout<<"\nAddress of student = "<<address<<endl;
+		cout<<"\nAge of student = "<<age<<endl;
+		}
+};
+class faculty{
+	private:
+		string name,address;
+		int age;
+	public:
+		void setdata(){
+			cout<<"\nEnter name of faculty ";
+			fflush(stdin);
+			getline(cin,name);
+			cout<<"\nEnter address of faculty ";
+			fflush(stdin);
+			getline(cin,address);
+			cout<<"\nEnter age of faculty ";
+			fflush(stdin);
+			cin>>age;
+		}
+		void getdata(){
+		cout<<"\nName of faculty = "<<name<<endl;
+		cout<<"\nAddress of faculty = "<<address<<endl;
+		cout<<"\nAge of faculty = "<<age<<endl;
+		}
+};
+class employee{
+	private:
+		string name,address;
+		int age;
+	public:
+		void setdata(){
+			cout<<"\nEnter name of employee ";
+			fflush(stdin);
+			getline(cin,name);
+			cout<<"\nEnter address of employee ";
+			fflush(stdin);
+			getline(cin,address);
+			cout<<"\nEnter age of employee ";
+			fflush(stdin);
+			cin>>age;
+		}
+		void getdata(){
+		cout<<"\nName of employee = "<<name<<endl;
+		cout<<"\nAddress of employee = "<<address<<endl;
+		cout<<"\nAge of employee = "<<age<<endl;
+		}
+};
+class book{
+	private:
+		string name;
+		int date2,date1;
+	public:
+		void setdata(){
+			cout<<"\nEnter name of author name ";
+			fflush(stdin);
+			getline(cin,name);
+			cout<<"\nEnter issue date of book";
+			fflush(stdin);
+			cin>>date1;
+			cout<<"\nEnter submit date of book";
+			fflush(stdin);
+			cin>>date2;
+		}
+		void getdata(){
+		cout<<"\nName of author name = "<<name<<endl;
+		cout<<"\nIssue date of book = "<<date1<<endl;
+		cout<<"\nSubmit date of book= "<<date2<<endl;
+		}
+};
+class bus{
+	private:
+		string stop;
+		int number;
+	public:
+		void setdata(){
+			cout<<"\nEnter number of Bus ";
+			fflush(stdin);
+			cin>>number;
+			cout<<"\nEnter stopes of Bus";
+			fflush(stdin);
+			getline(cin,stop);
+		}
+		void getdata(){
+		cout<<"\nNumber of Bus = "<<number<<endl;
+		cout<<"\nStop of Bus = "<<stop<<endl;
+		}
+};
+int main(){
+	int ch,n;
+	student s[100];
+	faculty f[100];
+	employee e[100];
+	book b[100];
+	bus b1[100];
+	cout<<"********** ACROPOLIS INSTITUTE OF TECHNOLOGY & RESEARCH **********\n";
+	do{
+		cout<<"\n Enter 1 for Students "<<"\t\t Enter 2 for Read student data "<<"\n Enter 3 for Faculty ";
+    	cout<<"\t\t Enter 4 for Read Faculty data "<<"\n Enter 5 for Employee "<<"\t\t Enter 6 for Read Employee data ";
+		cout<<"\n Enter 7 for Book"<<"\t\t Enter 8 for Read Book data"<<"\n Enter 9 for Bus"<<"\t\t Enter 10 for Read Bus data";
+	    cout<<"\n Enter 11 for exit"<<"\n Enter your choice ";
+	    cin>>ch;
+	switch(ch){
+		case 1:
+			cout<<"\nEnter total number of student in our collage";
+			cin>>n;
+			cout<<"\nEnter information of "<<n<<"students";
+			for(int i=0;i<=n-1;i++)
+			s[i].setdata();
+			break;
+			
+		case 2:
+			cout<<"\nInformation of "<<n<<"students ";
+			for(int i=0;i<=n-1;i++)
+			s[i].getdata();
+			break;
+			
+		case 3:
+			cout<<"\nEnter total number of faculty in our collage";
+			cin>>n;
+			cout<<"\nEnter information of "<<n<<"faculty";
+			for(int i=0;i<=n-1;i++)
+			f[i].setdata();
+			break;
+			
+		case 4:
+			cout<<"\nInformation of "<<n<<"faculty ";
+			for(int i=0;i<=n-1;i++)
+			f[i].getdata();
+			break;
+			
+		case 5:
+			cout<<"\nEnter total number of Employee in our collage";
+			cin>>n;
+			cout<<"\nEnter information of "<<n<<"Employee";
+			for(int i=0;i<=n-1;i++)
+			e[i].setdata();
+			break;
+			
+		case 6:
+			cout<<"\nInformation of "<<n<<"Employee ";
+			for(int i=0;i<=n-1;i++)
+			e[i].getdata();
+			break;
+			
+		case 7:
+			cout<<"\nEnter total number of Book in our collage";
+			cin>>n;
+			cout<<"\nEnter information of "<<n<<"Book";
+			for(int i=0;i<=n-1;i++)
+			b[i].setdata();
+			break;
+			
+		case 8:
+			cout<<"\nInformation of "<<n<<"Book ";
+			for(int i=0;i<=n-1;i++)
+			b[i].getdata();
+			break;
+			
+		case 9:
+			cout<<"\nEnter total number of Bus in our collage";
+			cin>>n;
+			cout<<"\nEnter information of "<<n<<"Bus";
+			for(int i=0;i<=n-1;i++)
+			b1[i].setdata();
+			break;
+			
+		case 10:
+			cout<<"\nInformation of "<<n<<"Bus ";
+			for(int i=0;i<=n-1;i++)
+			b1[i].getdata();
+			break;
+		
+		case 11:
+	        exit(0);
+	        
+	    default:
+	    	cout<<"\nEnter correct choice";
+	}
+	}while(1);
+	return 0;
+}
