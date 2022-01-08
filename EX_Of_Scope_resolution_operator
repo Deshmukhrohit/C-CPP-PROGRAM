@@ -1,0 +1,27 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class Doctor
+{
+	string name;
+	int fees;
+	public:
+		void input();
+		void output();
+};
+void Doctor::input(){
+	cout<<"\nEnter name and fees of Doctor";
+	getline(cin,name);
+	cin>>fees;
+}
+void Doctor::output(){
+	cout<<"\nName of Doctor = "<<name;
+	cout<<"\nFees of Doctor = "<<fees;
+}
+int main(){
+	Doctor d;
+	d.input();
+	d.output();
+	getch();
+	return 0;
+}
