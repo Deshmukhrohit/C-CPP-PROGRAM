@@ -1,0 +1,35 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class Box
+{
+	int l,b,h;
+	public:
+		Box()
+		{
+			l=1;b=2;h=3;
+		}
+		Box(int x,int y,int z)
+		{
+			l=x;b=y;h=z;
+		}
+		Box(Box &m)
+		{
+			l=m.l;
+			b=m.b;
+			h=m.h;
+		}
+		void show()
+		{
+			cout<<"\nLength of Box = "<<l;
+			cout<<"\nBreadth of Box = "<<b;
+			cout<<"\nHeight of Box = "<<h;	
+		}
+};
+int main(){
+	Box b1;b1.show();
+	Box b2(3,4,8);b2.show();
+	Box b3;b3.show();
+	getch();
+	return 0;
+}
