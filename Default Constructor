@@ -1,0 +1,28 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class test{
+	int a;
+	float b;
+	public:
+		test(){
+			a=10;
+			b=4.5;
+		}
+		void input(){
+			cout<<"\nEnter any integer and float value";
+			cin>>a>>b;
+		}
+		void output(){
+			cout<<"\nValue of integer variable = "<<a;
+			cout<<"\nValue of float variable = "<<b;
+		}
+};
+int main(){
+	test t1=test();
+	t1.output();
+	test t2;
+	t2.output();
+	getch();
+	return 0;
+}
