@@ -1,0 +1,51 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class ConsDes{
+	static int count;
+	public:
+		ConsDes(){
+			count++;
+			cout<<"\nObject no."<<count<<" "<<"created";
+		}
+		~ConsDes(){
+			cout<<"\nObject no."<<count<<" "<<"Destroyed";
+		}
+};
+int ConsDes::count=0;
+int main(){
+	ConsDes c1,c2,c3;
+	{
+		cout<<"\nInside inner block-1";
+		ConsDes c4,c5;
+	}
+	cout<<"\nInside main function";
+	{
+		cout<<"\nInside inner block-2";
+		ConsDes c6,c7;
+	}
+	cout<<"\nBack in main function";
+	getch();
+	return 0;
+}
+
+
+
+
+OUTPUT:-
+Object no.1 created
+Object no.2 created
+Object no.3 created
+Inside inner block-1
+Object no.4 created
+Object no.5 created
+Object no.5 Destroyed
+Object no.4 Destroyed
+Inside main function
+Inside inner block-2
+Object no.4 created
+Object no.5 created
+Object no.5 Destroyed
+Object no.4 Destroyed
+Back in main function
