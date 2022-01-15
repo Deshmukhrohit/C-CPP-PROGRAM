@@ -1,0 +1,75 @@
+
+#include <iostream>
+#include<stdio.h>
+using namespace std;
+class student
+{
+    private:
+    string name,subject;
+    public:
+    int roll_no;
+    void set_student(){
+        cout<<"\nEnter name of student ";
+        fflush(stdin);
+        getline(cin,name);
+        cout<<"\nEnter subject of student ";
+        fflush(stdin);
+        getline(cin,subject);
+        cout<<"\nEnter Roll no. of student ";
+        fflush(stdin);
+        cin>>roll_no;
+    }
+    void show_student(){
+        fflush(stdout);
+        cout<<"\nName of student "<<name;
+        fflush(stdout);
+        cout<<"\nSubject of student "<<subject;
+        fflush(stdout);
+        cout<<"\nRoll no. of student "<<roll_no;
+    }
+};
+class marks:public student
+{
+    protected:
+    int m1,m2,m3,m4,m5;
+    public:
+    void set_marks(){
+        cout<<"\nEnter marks of all subject ";
+        cin>>m1>>m2>>m3>>m4>>m5;
+    }
+    void show_marks(){
+        cout<<"\nMarks of 1 subject = "<<m1;
+        cout<<"\nMarks of 2 subject = "<<m2;
+        cout<<"\nMarks of 3 subject = "<<m3;
+        cout<<"\nMarks of 4 subject = "<<m4;
+        cout<<"\nMarks of 5 subject = "<<m5;
+    }
+};
+class result:public marks
+{
+    private:
+    int total;
+    public:
+    void show_result(){
+        total = m1+m2+m3+m4+m5;
+        show_student();
+        show_marks();
+        cout<<"\nTotal marks of student = "<<total;
+    }
+};
+int main()
+{
+   result r1[100];
+   int n;
+   cout<<"\nEnter total no. of student ";
+   cin>>n;
+   for(int i=0;i<=n-1;i++)
+   {
+   r1[i].set_student();r1[i].set_marks();
+   }
+   for(int i=0;i<=n-1;i++)
+   {
+   r1[i].show_result();
+   }
+   return 0;
+}
