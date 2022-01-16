@@ -1,0 +1,67 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class A
+{
+	private:
+		int x;
+	public:
+		void setX(){
+			cout<<"\nEnter any integer number ";
+			cin>>x;
+		}
+		void showX(){
+			cout<<"\nValue of base class variable = "<<x;
+		}
+};
+class B:public A
+{
+	private:
+		float y;
+	public:
+		void setY(){
+			cout<<"\nEnter any float number";
+			cin>>y;
+		}
+		void showY(){
+			cout<<"\nValue of base class variable = "<<y;
+		}
+};
+class C:public A
+{
+	private:
+		double z;
+	public:
+		void setZ(){
+			cout<<"\nEnter any double number";
+			cin>>z;
+		}
+		void showZ(){
+			cout<<"\nValue of base class variable = "<<z;
+		}
+};
+class D:public B
+{
+	private:
+		long double n;
+	public:
+		void setN(){
+			cout<<"\nEnter any long number";
+			cin>>n;
+		}
+		void showN(){
+			cout<<"\nValue of base class variable = "<<n;
+		}
+};
+int main(){
+	B obj;
+	C obj1;
+	D obj2;
+	obj.setX();obj.setY();
+	obj.showX();obj.showY();
+	obj1.setX();obj1.setZ();
+	obj1.showX();obj1.showZ();
+	obj2.setX();obj2.setY();obj2.setN();
+	obj2.showX();obj2.showY();obj2.showN();
+	return 0;
+}
