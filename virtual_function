@@ -1,0 +1,42 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class Base
+{
+    public:
+      virtual void show()
+      {
+          cout<<"\nShow function of base class ";
+      }
+      void display(){
+          cout<<"\nDisplay function of base class ";
+      }
+};
+class Derived:public Base{
+    public:
+        void show()
+        {
+            cout<<"\nShow function of Derived class ";
+        }
+        void display()
+        {
+            cout<<"\nDisplay function of derived class ";
+        }
+};
+int main()
+{
+    Base ob;
+    Base *bptr;
+    bptr = &ob;
+    bptr->show();   //Base class
+    bptr->display();  //Base class
+    Derived od;
+    Derived *dptr;
+    dptr = &od;
+    dptr->show();   //Derived class
+    dptr->display();  //Derived class
+    bptr=&od;
+    bptr->show();      //Derived class
+    bptr->display();   //Base class
+    getch();
+}
