@@ -1,0 +1,42 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class complex{
+    private:
+      int a;
+      int i;
+    public:
+      complex(int a1, int b)
+      {
+          a=a1;
+          i=b;
+      }
+      void show_complex()
+      {
+          cout<<"\nValue of a = "<<a;
+          cout<<"\nValue of i = "<<i<<"i";
+      }
+      complex operator+(complex s)
+      {
+          complex ans;
+          ans.a = a+s.a;
+          ans.i = i+s.i;
+          return ans;
+      }
+      complex(){
+          a=0;
+          i=0;
+      }
+};
+int main()
+{
+    complex c1(5,6);
+    c1.show_complex();
+    complex c2(12,25);
+    c2.show_complex();
+    complex c3;
+    c3=c1+c2;
+    cout<<"\nComplex number = ";
+    c3.show_complex();
+    getch();
+}
