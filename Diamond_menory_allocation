@@ -1,0 +1,25 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class product{
+    private:
+     string name;
+     int price;
+    public:
+      void input(){
+          cout<<"\nEnter name and price of prodect ";
+          getline(cin,name);
+          cin>>price;
+      }
+      void output(){
+          cout<<"\nNmae of Product "<<name;
+          cout<<"\nPrice of Prodect "<<price;
+      }
+};
+int main(){
+     product *ptr = new product;
+     ptr->input();
+     ptr->output();
+     delete ptr;
+     getch();
+}
