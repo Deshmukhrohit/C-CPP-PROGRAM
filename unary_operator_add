@@ -1,0 +1,31 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class add
+{
+    private:
+    int x,y,z;
+    public:
+    add(int a,int b, int c)
+    {
+        x=a;y=b;z=c;
+    }
+    void show(){
+        cout<<endl<<"Value of x = "<<x;
+        cout<<endl<<"Value of y = "<<y;
+        cout<<endl<<"Value of z = "<<z;
+    }
+    void operator++(){
+        x=++x;
+        y = ++y;
+        z = ++z;
+    }
+};
+int main()
+{
+    add a(10,-20,30);
+    a.show();
+    ++a;   //u.operator-()
+    a.show();
+    getch();
+}
