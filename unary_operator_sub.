@@ -1,0 +1,29 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class uover
+{
+    private:
+    int x,y,z;
+    public:
+    uover(int a,int b,int c)
+    {
+        x=a;y=b;z=c;
+    }
+    void show(){
+        cout<<"\nValue of x = "<<x;
+        cout<<"\nValue of y = "<<y;
+        cout<<"\nValue of z = "<<z;
+    }
+    void operator-(){
+        x=-x;
+        y=-y; z=-z;
+    }
+};
+int main(){
+    uover u(12,-4,9);
+    u.show();
+    -u;
+    u.show();
+    getch();
+}
